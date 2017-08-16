@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Canvas Game Framework</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <style>
+    * { position: fixed; }
+    body { background: #eee; }
+    canvas {
+      background: #fff;
+      width: 100vmin;
+      top: 50%;
+      left: 50%;
+      transform: translateX(-50%)translateY(-50%);
+      image-rendering: -moz-crisp-edges;
+      image-rendering: -webkit-crisp-edges;
+      image-rendering: pixelated;
+      image-rendering: crisp-edges;
+    }
+  </style>
+</head>
+<body>
+
+  <canvas id="gameCanvas" width="128" height="128"></canvas>
+
+  <script>
+    var canvas = document.getElementById("gameCanvas");
+    var ctx = canvas.getContext("2d");
+
+    ctx.beginPath();
+    ctx.rect(10, 60, 10, 10);
+    ctx.fillStyle = "#000";
+    ctx.fill();
+    ctx.closePath();
+
+    ctx.beginPath();
+    ctx.rect(0, 70, 128, 1);
+    ctx.fillStyle = "#000";
+    ctx.fill();
+    ctx.closePath();
+  </script>
+  
+</body>
+</html>
